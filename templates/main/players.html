@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block content %}
+    <div class="main_team">
+        <div class="wrapper">
+    <h1>НАШИ ИГРОКИ</h1>
+    <div class="team_cards">
+    {% if player %}
+        {% for el in player %}
+            <div class="card">
+                <h4 class="name"><b>{{ el.name }}</b></h4><br>
+                <p class="position"><i>{{ el.about}}</i></p><br>
+                <p class="statistic">
+                    <ul>
+                        <li>Количество игр: {{ el.number_of_games}}</li>
+                        <li>Количество побед: {{ el.number_of_win}}</li>
+                        <li>Количество поражений: {{ el.number_of_lose}}</li>
+                    </ul>
+                </p>
+        {% endfor %}
+    {% else %}
+        <p>Пока игроков нет</p>
+    {% endif %}
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+{% endblock %}

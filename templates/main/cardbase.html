@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block content %}
+    <div class="main_cardbase">
+        <div class="wrapper">
+            <h1>БАЗА НАШИХ КАРТ</h1>
+                <div class="text_base">
+                    <p>
+                            <i>
+                                В данном блоке нашего сайта вы можете воспользоваться поисковой строкой для того, чтобы узнать какие карты и сколько
+                            имеются в наличии у нашего клуба
+                            </i>
+                    </p>
+                </div>
+                <div class="services_cards">
+                   <form action="{% url 'search_results' %}" method="get">
+                        <input name="q" type="text" placeholder="Название карты">
+                    </form>
+                </div>
+        </div>
+    </div>
+{% endblock %}

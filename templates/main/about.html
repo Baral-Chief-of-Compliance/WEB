@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{%load static%}
+
+{% block title %}
+Страница про нас
+{% endblock %}
+{% block content %}
+    <div class="wrapper">
+        <div class="main_about">
+            <div class="about_left">
+                <img class="mv-100" src="{% static "main/bolasda.png" %}" alt="bolas">
+            </div>
+            <div class="about_right">
+                <h1>ПАРУ СЛОВ <span class="ourclub">О НАС</span></h1>
+                <p>Это клуб по игре <b>Magic: The Gathering</b> для молодых, богатых и белых</p>
+                <ul>
+                    <li><b>НАША МИССИЯ</b> <i>- показать всем насколько мы отбитые</i></li>
+                    <li><b>НАВЫКИ</b> <i>- пить и кидать карты на стол</i></li>
+                    <li><b>ИГРОКИ</b> <i>- те, кто выполняет выше перечисленные пункты</i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Добавить карты
+{% endblock %}
+{% block content %}
+        <div class="main_addcards">
+            <h1>Добавить карты</h1>
+            <form method="post">
+                {% csrf_token %}
+                <ul>
+                    <li>{{ form.title }}</li>
+                    <li>{{ form.release }}</li>
+                    <li>{{ form.quantity }}</li>
+                    <li><input id="Code" type="text" name="Code" placeholder="Код" maxlength="20"></li>
+                    <li>Foil {{ form.foil }}</li>
+                </ul>
+                <button type="submit" class="btn btn-success">Добавить</button><br>
+                <span>{{ error }}</span>
+            </form>
+        </div>
+{% endblock %}

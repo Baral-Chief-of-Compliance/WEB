@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Результаты поиска
+{% endblock %}
+{% block content %}
+    <div class="main_search">
+        <h1>Результаты поиска</h1>
+    	{% for card in object_list %}
+            <ul>
+             <li><span class="ourclub">Название карты:</span> <b>{{ card.title }}</b> <span class="ourclub">Выпуск:</span> <b>{{card.release}}</b>
+                <span class="ourclub">Количество:</span> <b>{{card.quantity}}</b> <span class="ourclub">Foil:</span> <b>{{card.foil}}</b></li>
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}
